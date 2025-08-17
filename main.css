@@ -317,7 +317,6 @@ section {
 .article-grid {
   display: grid;
   align-items: start;
-   padding: 2rem;
 }
 
 
@@ -333,8 +332,8 @@ section {
   align-items: center;
   justify-content: space-between;
   text-align: start;
-  column-gap: 60px;
-  
+  column-gap: 30px;
+  font-size: var(--fts-xs);
   padding-block: var(--padding-10) var(--padding-50);
   padding-inline: 10px ;
   
