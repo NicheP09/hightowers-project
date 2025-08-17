@@ -53,6 +53,7 @@ body {
 
 .hightTowers-con {
     overflow: hidden;
+   
 }
  
 .flex {
@@ -81,7 +82,7 @@ nav {
   top: 0;
   width: 100%; 
   z-index: 100;
-    display: flex;
+  display: flex;
   justify-content: space-between;
   align-items: center;
 }
@@ -158,20 +159,46 @@ nav {
   background-color: var(--clr-primary);
   padding-block: 15px;
   font-weight: var(--ft-w-reg);
+    cursor: pointer;
 }
 .header-btn {
     display: none;
+      cursor: pointer;
 }
 
 section {
   padding-inline: 16px;
 }
-.hero-con {
-  background-image: url('/images/header-bg.jpg');
-  background-position: center;
-  border-radius: 50px;
- 
+
+.hero-wrapper {
+
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;  
 }
+
+.hero-wrapper::before {
+  position: absolute;
+  content: "";
+  height: 100%;
+  width: calc(100% - 2rem);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-image: url(images/header-bg.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  z-index: -1;
+  background-color: rgba(0, 0, 0, 0.5);
+  background-position: center center;
+  border-radius: 3rem;
+
+}
+
+.hero-con {
+  display: grid;
+}
+
 
 .hero {
   padding: 64px 16px;
@@ -195,7 +222,7 @@ section {
   font-weight: var(--ft-w-bold);
   line-height: 88px;
   margin-block: 32px;
-  opacity: 0;
+  
 }
 
 
@@ -211,6 +238,7 @@ section {
   align-items: center;
   justify-content: center;
   column-gap: 20px;
+  cursor: pointer;
 
 }
 .play {
@@ -258,18 +286,18 @@ section {
 }
 
 
-.isAnimate .hero p {
-   animation: BTT 0.60s 0.40s ease forwards;
+.isAnimateH  p {
+   animation: BTT 0.60s 0.200s ease forwards;
 }
 
-.isAnimate .hero h1 {
-   animation: BTT 0.70s 0.70s ease forwards;
+.isAnimateH h1 {
+   animation: BTT 0.70s 0.40s ease forwards;
 }
-.isAnimate  .bookTrip-con {
-   animation: BTT 0.70s 1.20s ease forwards;
+.isAnimateH  .bookTrip-con {
+   animation: BTT 0.60s 0.80s ease forwards;
 }
 .isAnimate .hero-image {
-  animation: BTT 0.70s 1.50s ease forwards;
+  animation: BTT 0.60s 0.100s ease forwards;
 }
 
 @keyframes BTT {
@@ -331,13 +359,23 @@ section {
 
 
 @media (width > 768px ) {
+  header {
+    padding-bottom: 0;
+  }
+  .nav-con {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
   nav {
     position: static;
     max-width: 1200px;
     padding: 2rem 1rem;
     row-gap: 32px;
     background-color: initial;
-    color: var(--clr-primary)
+    color: var(--clr-primary);
+    align-items: center;
   }
   
 .btm {
@@ -353,6 +391,43 @@ section {
   display: flex;
 }
 
+.hero-wrapper {
+  padding: 32px 16px;
+  
+}
+.hero-con {
+  grid-template-columns: minmax(0, 1fr) repeat(5, minmax(0, calc(1200px / 5))) minmax(0, 1fr);
+}
+.hero {
+  text-align: left;
+  grid-column: 2 / 4;
+  padding-block: 8rem;
+
+}
+.hero-image {
+  position: relative;
+  isolation: isolate;
+  height: 100%;
+  grid-column: 4 / 8;
+
+  
+}
+.hero-image img {
+  width: unset;
+  height: 100%;
+  overflow: clip;
+  overflow-clip-margin: content-box;
+}
+
+.bookTrip-con {
+  justify-content: start;
+}
+}
+
+@media (width > 1200px) {
+  .hero {
+    padding-inline: 1rem 0px;
+  }
 }
 
 
