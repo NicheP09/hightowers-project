@@ -258,17 +258,17 @@ section {
 }
 
 
-.ani-one {
+.isAnimate .hero p {
    animation: BTT 0.60s 0.40s ease forwards;
 }
 
-.ani-two {
+.isAnimate .hero h1 {
    animation: BTT 0.70s 0.70s ease forwards;
 }
-.ani-three {
+.isAnimate  .bookTrip-con {
    animation: BTT 0.70s 1.20s ease forwards;
 }
-.ani-four {
+.isAnimate .hero-image {
   animation: BTT 0.70s 1.50s ease forwards;
 }
 
