@@ -76,7 +76,7 @@ body {
 
 .flex--column {
   flex-direction: column;
-  justify-content: center;
+  
 }
 
 header {
@@ -334,7 +334,6 @@ section {
   align-items: center;
   justify-content: space-between;
   text-align: start;
-  
   column-gap: 60px;
   font-size: var(--fts-s);
   padding-block: var(--padding-10) var(--padding-50);
@@ -360,19 +359,25 @@ section {
 
   
 
-.isAnimateH  p {
-   animation: BTT 0.60s 0.200s ease forwards;
+.isAnimateHero  p {
+   animation: BTT 0.60s 0.20s ease forwards;
 }
 
-.isAnimateH h1 {
+.isAnimateHero h1 {
    animation: BTT 0.70s 0.40s ease forwards;
 }
-.isAnimateH  .bookTrip-con {
+.isAnimateHero  .bookTrip-con {
    animation: BTT 0.60s 0.80s ease forwards;
 }
 .isAnimate .hero-image {
-  animation: BTT 0.60s 0.100s ease forwards;
+  animation: RTL 0.80s 0.100s ease forwards;
 }
+
+
+.animateDesti {
+  animation: BTT 0.30s 0.20s ease-in forwards;
+}
+
 
 @keyframes BTT {
   from {
@@ -381,6 +386,17 @@ section {
   }
   to {
     transform: translate(0);
+     opacity: 1;
+  }
+}
+
+@keyframes RTL {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
      opacity: 1;
   }
 }
