@@ -37,8 +37,9 @@
 --fts-s: clamp(1.2rem, 2vw, 2rem);
 --fts-norm: clamp(1.5rem, 2vw, 2.3rem);
 --fts-reg: clamp(1.5rem, 2vw + 2rem, 2.5rem);
---fts-mid: clamp(2rem, 2.5 + rem2vw, 3rem);
---fts-l: clamp(2rem, 2.5 + rem2vw, 3.5rem);
+--fts-mid: clamp(2rem, 2.5rem + 2vw, 3rem);
+--fts-l: clamp(2rem, 2.5rem + 2vw, 3.5rem);
+--fts-h1: clamp(3rem, 3.5rem + 2vw, 4rem);
 /* font-Weight */
 --ft-w-reg: 500;
 --ft-w-bold: 600;
@@ -58,7 +59,7 @@ body {
 
 .hightTowers-con {
   overflow: hidden;
-  line-height: 1.5;
+
 }
  
 .flex {
@@ -208,7 +209,7 @@ section {
 
 
 .hero {
-  padding: 64px 16px 0 16px;
+  padding: 50px 16px;
    text-align: center;
    color: black;
 
@@ -226,10 +227,9 @@ section {
 
 
 .hero h1 {
-  font-size: 4.5rem;
+  font-size: var(--fts-l);
   font-weight: var(--ft-w-bold);
-  line-height: 88px;
-  margin-block: 32px;
+  margin-block: 24px;
   
 }
 
