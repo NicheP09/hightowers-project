@@ -55,6 +55,7 @@ body {
 
  color: var(--clr-text-1);
  font-family: "DM Sans", sans-serif;
+ line-height: 1.5;
 }
 
 .hightTowers-con {
@@ -189,7 +190,7 @@ section {
   position: absolute;
   content: "";
   height: 100%;
-  width: calc(100% - 2rem);
+  width: calc(100% - 2.5rem);
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -317,6 +318,7 @@ section {
 .article-grid {
   display: grid;
   align-items: start;
+  padding-inline: 4rem;
 }
 
 
@@ -342,7 +344,7 @@ section {
   display: flex;
   align-items: center;
   background: var(--clr-primary);
-  
+  padding: 0 10px;
   color: var(--clr-text-1);
   border-radius: 20px;
 }
@@ -500,7 +502,7 @@ section {
 .hero {
   text-align: left;
   grid-column: 2 / 4;
-  padding-block: 8rem;
+
 
 }
 .hero-image {
@@ -538,7 +540,7 @@ section {
   .article-grid {
     grid-template-columns: 1fr 1fr 1fr;
     gap: 30px;
-    padding-inline: 6rem;
+    padding-inline: 3rem;
    
   
   }
@@ -551,7 +553,7 @@ section {
   }
   .article-grid {
    
-    gap: 3rem;
+    gap: 6rem;
   }
 }
 
