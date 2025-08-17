@@ -39,7 +39,7 @@
 --fts-reg: clamp(1.5rem, 2vw + 2rem, 2.5rem);
 --fts-mid: clamp(2rem, 2.5rem + 2vw, 3rem);
 --fts-l: clamp(2rem, 2.5rem + 2vw, 3.5rem);
---fts-h1: clamp(3rem, 3.5rem + 2vw, 4rem);
+--fts-h1: clamp(3rem, 4rem + 1vw, 5rem);
 /* font-Weight */
 --ft-w-reg: 500;
 --ft-w-bold: 600;
@@ -227,7 +227,7 @@ section {
 
 
 .hero h1 {
-  font-size: var(--fts-l);
+  font-size: var(--fts-h1);
   font-weight: var(--ft-w-bold);
   margin-block: 24px;
   
@@ -493,7 +493,7 @@ section {
 }
 
 .hero-wrapper {
-  padding: 32px 16px;
+  padding: 32px 16px 10px 16px;
   
 }
 .hero-con {
