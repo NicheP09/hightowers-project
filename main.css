@@ -30,7 +30,7 @@
   --margin-50: 50px;
 /* box-shadow */
 /* font-sizes */
---fts-s: clamp(1rem, 2vw, 1.5rem);
+--fts-s: clamp(1.2rem, 2vw, 2rem);
 --fts-reg: clamp(1.5rem, 2vw + 2rem, 2.5rem);
 --fts-mid: clamp(2rem, 2.5 + rem2vw, 3rem);
 --fts-l: clamp(2rem, 2.5 + rem2vw, 3.5rem);
@@ -48,7 +48,7 @@ a {
 body {
 
  color: var(--clr-text-1);
- font-family:  "DM Sans", sans-serif;
+ font-family: "DM Sans", sans-serif;
 }
 
 .hightTowers-con {
@@ -73,7 +73,7 @@ body {
 }
 
 header {
-
+  padding-bottom: 100px;
 }
 
 nav {
@@ -139,8 +139,8 @@ nav {
 
 
 
-.header-btn {
-  appearance:none ;
+.bookBtn {
+
   color:inherit;
   padding: 12px 2rem;
   outline: none;
@@ -151,8 +151,104 @@ nav {
   font-family: Arial, Helvetica, sans-serif;
   font-size: 1rem;
   white-space: nowrap;
-  display: none;
+
 }
+.btn-primary {
+  color: var(--clr-text-1);
+  background-color: var(--clr-primary);
+  padding-block: 15px;
+  font-weight: var(--ft-w-reg);
+}
+.header-btn {
+    display: none;
+}
+
+section {
+  padding-inline: 16px;
+}
+.hero-con {
+  background-image: url('/images/header-bg.jpg');
+  background-position: center;
+  border-radius: 50px;
+ 
+}
+
+.hero {
+  padding: 64px 16px;
+   text-align: center;
+   color: black;
+
+}
+
+.hero p {
+  font-weight: var(--ft-w-bold);
+  
+
+
+}
+
+.hero h1 {
+  font-size: 4.5rem;
+  font-weight: var(--ft-w-bold);
+  line-height: 88px;
+  margin-block: 32px;
+  
+}
+
+.white {
+  color: var(--clr-text-1);
+}
+.blue {
+  color: var(--clr-primary)
+}
+.bookTrip-con {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  column-gap: 20px;
+
+}
+.play {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  position: relative;
+  background-color: white;
+  z-index: 10;
+}
+.play::before {
+  position: absolute;
+  content: '';
+  background: var(--clr-bg-100);
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+}
+
+.play::after {
+  position: absolute;
+  content: '';
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0 5px 6px 5px;
+  border-color:  transparent transparent#fcfcfc transparent;
+  
+  top: 50%;
+  left: 53%;
+
+  transform: translate(-50%, -50%) rotate(90deg);
+}
+
+.hero-image img {
+  display: flex;
+  width: 100%;
+}
+
 
 
 
