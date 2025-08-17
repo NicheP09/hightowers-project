@@ -29,7 +29,7 @@ const staggerObserver = new IntersectionObserver((entries) => {
       destiCards.forEach((card, i) => {
         setTimeout(() => {
           card.classList.add('animateDesti');
-        }, i * 500); 
+        }, i * 300); 
       });
     } else {
       destiCards.forEach(card => card.classList.remove('animateDesti'));

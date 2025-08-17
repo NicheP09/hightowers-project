@@ -163,7 +163,7 @@ nav {
 .btn-primary {
   color: var(--clr-text-1);
   background-color: var(--clr-primary);
-  padding-block: 15px;
+  padding: 20px 30px;
   font-weight: var(--ft-w-reg);
   font-size: var(--fts-s);
   cursor: pointer;
@@ -208,7 +208,7 @@ section {
 
 
 .hero {
-  padding: 64px 16px;
+  padding: 64px 16px 0 16px;
    text-align: center;
    color: black;
 
@@ -317,10 +317,9 @@ section {
 .article-grid {
   display: grid;
   align-items: start;
+   padding: 4rem;
 }
-.destination-img { 
 
-}
 
 .destination-img img {
   border-radius: 2rem;
@@ -355,6 +354,10 @@ section {
   color: white;
   font-size: 1.3em;
   margin-right: 0.2em;
+}
+
+.journey-con {
+  color: black;
 }
 
   
@@ -531,7 +534,7 @@ section {
   height: 30px;
 }
 .play::after {
-    border-width: 0 10px 12px 10px;
+    border-width: 0 8px 10px 8px;
 }
 
   .article-grid {
