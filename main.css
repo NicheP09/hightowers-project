@@ -175,15 +175,14 @@ nav {
       cursor: pointer;
 }
 
-section {
-  padding-inline: 16px;
-}
+
 
 .hero-wrapper {
 
   position: relative;
   overflow: hidden;
   isolation: isolate;  
+  line-height: 1.3;
 }
 
 .hero-wrapper::before {
@@ -210,7 +209,7 @@ section {
 
 
 .hero {
-  padding: 50px 16px;
+  padding: 60px 16px;
    text-align: center;
    color: black;
 
@@ -230,7 +229,7 @@ section {
 .hero h1 {
   font-size: var(--fts-h1);
   font-weight: var(--ft-w-bold);
-  margin-block: 24px;
+  margin-block: 16px;
   
 }
 
@@ -508,7 +507,6 @@ section {
 .hero-image {
   position: relative;
   isolation: isolate;
-  height: 100%;
   grid-column: 4 / 8;
 
   
