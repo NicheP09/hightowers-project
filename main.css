@@ -183,17 +183,22 @@ section {
 .hero p {
   font-weight: var(--ft-w-bold);
   
-
-
 }
+
+.hero  p, .hero h1, .hero .hero-image, .bookTrip-con {
+  opacity: 0;
+}
+
 
 .hero h1 {
   font-size: 4.5rem;
   font-weight: var(--ft-w-bold);
   line-height: 88px;
   margin-block: 32px;
-  
+  opacity: 0;
 }
+
+
 
 .white {
   color: var(--clr-text-1);
@@ -243,13 +248,40 @@ section {
 
   transform: translate(-50%, -50%) rotate(90deg);
 }
-
+.hero-image {
+    opacity: 0;
+}
 .hero-image img {
   display: flex;
   width: 100%;
+
 }
 
 
+.ani-one {
+   animation: BTT 0.60s 0.40s ease forwards;
+}
+
+.ani-two {
+   animation: BTT 0.70s 0.70s ease forwards;
+}
+.ani-three {
+   animation: BTT 0.70s 1.20s ease forwards;
+}
+.ani-four {
+  animation: BTT 0.70s 1.50s ease forwards;
+}
+
+@keyframes BTT {
+  from {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translate(0);
+     opacity: 1;
+  }
+}
 
 
 @media (max-width: 767px) {
