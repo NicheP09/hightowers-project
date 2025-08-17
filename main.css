@@ -317,7 +317,7 @@ section {
 .article-grid {
   display: grid;
   align-items: start;
-   padding: 4rem;
+   padding: 2rem;
 }
 
 
@@ -334,7 +334,7 @@ section {
   justify-content: space-between;
   text-align: start;
   column-gap: 60px;
-  font-size: var(--fts-s);
+  
   padding-block: var(--padding-10) var(--padding-50);
   padding-inline: 10px ;
   
@@ -342,9 +342,8 @@ section {
   .rating {
   display: flex;
   align-items: center;
-  font-size: var(--fts-xs);
   background: var(--clr-primary);
-  padding: 0 8px;
+  
   color: var(--clr-text-1);
   border-radius: 20px;
 }
@@ -352,7 +351,7 @@ section {
 .rating::before {
   content: '\2605'; 
   color: white;
-  font-size: 1.3em;
+
   margin-right: 0.2em;
 }
 
@@ -407,7 +406,7 @@ section {
 @media (width > 540px) {
   .article-grid {
     grid-template-columns: 1fr 1fr;
-    gap: 30px;
+    gap: 20px;
   }
 
  
@@ -552,7 +551,7 @@ section {
     padding-inline: 1rem 0px;
   }
   .article-grid {
-    padding-inline: 6rem;
+   
     gap: 3rem;
   }
 }
