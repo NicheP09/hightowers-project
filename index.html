@@ -3,7 +3,14 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+   <!-- Remixicon CSS library for icons -->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet" />
+
+
+    <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+  />
   <link rel="stylesheet" href="main.css">
   <title>HighTowers</title>
   <script src="main.js" defer></script>
@@ -64,13 +71,13 @@
       </div>
     </section>
 
-    <section class="dest">
+    <section class="sect">
       <div class="destination-con">
-      <div class="dest-header">
+      <div class="sect-header ">
      <h2>Popular Destination</h2>
      <p>Disscover the Most Loved Destinations Around the Globe</p>
      </div>
-     <div class="article-grid">
+     <div class="article-grid grid">
       <article class=" desti-card desti-three flex flex--column">
       <div class="destination-img">
         <img src="/images/destination-1.jpg" alt="island and a ship" width="500">
@@ -127,41 +134,53 @@
       </div>
     </section>
 
-    <section>
-      <div class="journey-con">
-        <h4>Journey To The Sky Made Simple</h4>
+    <section class="sect">
+      <div class="journey-con ">
+        <div class="sect-header journey-header">
+        <h2>Journey To The Sky Made Simple!</h2>
         <p>Effortless Planning for Your Next Adventure</p>
-
-        <article>
-          <i></i>
+        </div>
+        <div class="journey-grid grid">
+        <article class="journey-article">
+          
+          <div class="journey-bg">
+          <span class=""><i class="ri-bookmark-3-line"></i></span>
           <p>Seamless Booking Process</p>
-          <div class="appear">
+          </div>
+          <div class="appear" style="display:;">
+             <span class="journey-icon"><i class="ri-bookmark-3-line"></i></span>
             <h3>Easy Reservations, One Click Away</h3>
             <p>From flights and accommodations to activities and transfers, everything you need is available at your fingertips, making travel planning effortless. </p>
           </div>
         </article>
-        <article>
-          <i></i>
-          <p>Seamless Booking Process</p>
-          <div class="appear">
+        <article class="journey-article">
+          <div class="journey-bg">
+           <span><i class="ri-landscape-fill"></i></span>
+          <p>Tailored Itineraries</p>
+          </div>
+          <div class="appear"  style="display: ;">
+           <span class="journey-icon"><i class="ri-landscape-fill"></i></span>
             <h3>Easy Reservations, One Click Away</h3>
             <p>From flights and accommodations to activities and transfers, everything you need is available at your fingertips, making travel planning effortless. </p>
           </div>
         </article>
-        <article>
-          <i></i>
-          <p>Seamless Booking Process</p>
-          <div class="appear">
+        <article class="journey-article">
+           <div class="journey-bg">
+            <span><i class="ri-map-2-line"></i></span>
+          <p>Expert Local Insights</p>
+          </div>
+          <div class="appear"  style="display:;">
+             <span class="journey-icon"><i class="ri-map-2-line"></i></span>
             <h3>Easy Reservations, One Click Away</h3>
             <p>From flights and accommodations to activities and transfers, everything you need is available at your fingertips, making travel planning effortless. </p>
           </div>
         </article>
-
+        </div>
           </div>
     </section>
 
 
-        <section>
+        <section class="sect">
           <div class="enjoy">
             <div class="enjoy-img-con">
               <img src="/images/showcase.jpg" alt="a child enjoy playing at sea" width="500">

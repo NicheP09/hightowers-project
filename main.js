@@ -11,7 +11,7 @@ const observer = new IntersectionObserver(entries  => {
  
     console.log('not')
   }
-}, {threshold: 0.9})
+}, {threshold: 0.5})
 
 const heroCon= document.querySelector('.hero-con');
 const hero= document.querySelector('.hero');

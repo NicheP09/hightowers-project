@@ -165,7 +165,7 @@ nav {
 .btn-primary {
   color: var(--clr-text-1);
   background-color: var(--clr-primary);
-  padding: 20px 30px;
+  padding: 15px 30px;
   font-weight: var(--ft-w-reg);
   font-size: var(--fts-s);
   cursor: pointer;
@@ -175,7 +175,11 @@ nav {
       cursor: pointer;
 }
 
+section{
+  padding-inline: 20px;
+  padding-block: 60px;
 
+}
 
 .hero-wrapper {
 
@@ -229,7 +233,7 @@ nav {
 .hero h1 {
   font-size: 4.5rem;
   font-weight: var(--ft-w-bold);
-  margin-block: 10px;
+  margin-block: 10px 50px;
   
 }
 
@@ -295,7 +299,7 @@ nav {
   width: 100%;
 
 }
-.dest {
+.sect {
   padding-top: 4.5rem;
  
 }
@@ -303,15 +307,15 @@ nav {
   text-align: center;
   color: black;
 }
-.dest-header{
+.sect-header{
     padding-block: 4.5rem;
 }
-.dest-header h2 {
+.sect-header h2 {
   font-size: var(--fts-norm);
 }
 
-.dest-header p {
-  font-size: var(--fts-s);
+.sect-header p {
+  font-size: var(--fts-xs);
 }
 
 .article-grid {
@@ -357,9 +361,86 @@ nav {
 
 .journey-con {
   color: black;
+  padding:2rem;
 }
 
+
+.journey-grid {
+  display: grid;
+  gap: 40px;
   
+}
+
+
+.journey-article {
+  position: relative;
+  background:  #f3f4f6;
+  padding: 1.2rem;
+  border-radius: 1rem 1rem 0 0;
+
+  cursor: pointer;
+
+}
+.journey-header {
+  margin-bottom: 10px;
+}
+
+.journey-bg span i {
+  font-size: 24px;
+  color: var(--clr-primary);
+}
+
+
+.journey-bg p {
+  margin-top: 4rem;
+  font-weight: var(--ft-w-bold);
+}
+
+
+
+
+
+.appear {
+  position: absolute;
+  background-color: var(--clr-primary);
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: -23%;
+  padding: var(--padding-30) ;
+  color: var(--clr-text-1);
+  border-radius: 20px 20px 0 0 ;
+  opacity: 0;
+  z-index: 1;
+  transition: all 0.30s;
+  transform: translateY(5%);
+  pointer-events: none;
+
+}
+
+
+
+.journey-icon i {
+  
+  padding: var(--padding-10);
+  border: 2px solid white;
+  border-radius: 50%;
+}
+
+.appear h3 {
+  margin-block: var(--padding-20);
+  font-size: 12px;
+}
+.appear p {
+  font-size: 10px;
+}
+
+
+.journey-article:hover   .appear {
+  opacity: 1;
+  transform: translateY(0);
+}
+
 
 .isAnimateHero  p {
    animation: BTT 0.60s 0.20s ease forwards;
@@ -404,11 +485,12 @@ nav {
 }
 
 @media (width > 540px) {
-  .article-grid {
+ .grid {
     grid-template-columns: 1fr 1fr;
     gap: 20px;
   }
 
+  
  
 }
 @media (max-width: 767px) {
@@ -522,26 +604,27 @@ nav {
   justify-content: start;
 }
 .play {
-  width: 70px;
-  height: 70px;
-  min-width: 70px;
-  min-height: 70px;
+  width: 60px;
+  height: 60px;
+  min-width: 60px;
+  min-height: 60px;
 }
 .play::before {
-  width: 30px;
-  height: 30px;
+  width: 25px;
+  height: 25px;
 }
 .play::after {
-    border-width: 0 8px 10px 8px;
+    border-width: 0 6px 8px 6px;
 }
 
-  .article-grid {
+ .grid {
     grid-template-columns: 1fr 1fr 1fr;
     gap: 30px;
     padding-inline: 3rem;
    
   
   }
+  
 
 }
 
@@ -549,10 +632,21 @@ nav {
   .hero {
     padding-inline: 1rem 0px;
   }
-  .article-grid {
+ .grid {
    
-    gap: 6rem;
+    gap: 3rem;
+    padding-inline: 6rem;
   }
+  .sect {
+    max-width: 1200px;
+    margin-inline: auto;
+  }
+  .journey-grid {
+    gap: 1rem;
+    padding-inline: 0;
+  }
+
+ 
 }
 
 
