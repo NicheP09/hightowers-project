@@ -568,17 +568,51 @@ padding-inline: 2rem;
 
 .testimonials-grid {
   display: grid;
+  gap: 1rem;
+  grid-auto-flow: column;
+  grid-auto-columns: 400px;
+  overflow-x: hidden;
 }
 
 .testimonial-card {
   padding: 5px;
-  background-color:#f3f4f6;
+  background-color:#f3f4f6 ;
   border-radius: 1rem;
 }
 .testimonial-content {
   background: #ffff;
+  padding: 1rem;
+  
+}
+.testimonial-content  i{
+  font-size: 16px;
+}
+.testimonial-content p {
+  margin-top: 20px;
+}
+.profile {
+  display: grid;
+  grid-template-columns: 60px 1fr;
+  padding: 1rem;
+  gap: 20px;
+  align-items: center;
 }
 
+
+.profile img {
+  max-width: 100%;
+  border-radius: 50%;
+}
+
+.profile h4 {
+font-size: 1.2rem;
+}
+
+.profile h5 {
+  color: var(--clr-text-1a);
+  font-size: 1rem;
+  font-weight: 500;
+}
  
 .isAnimateHero  p, .isAnimate .enjoy-desc h2 {
    animation: BTT 0.60s .5s ease forwards;

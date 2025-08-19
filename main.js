@@ -102,17 +102,22 @@ testimonialsDetails.forEach(testimony => {
       <span><i class="ri-star-fill"></i></span>
       <span><i class="ri-star-fill"></i></span>
 </div>
-  </div>
+
 <p>
 ${testimony.desc}  
 </p>
+  </div>
+
 <div class="profile">
 <div class="profile-img">
   <img src=${testimony.dp} alt="user-dp" with=" 100">
 </div>
+<div class="profile-details">
 <h4>${testimony.name}</h4>
 <h5>${testimony.occupation}</h5>
+ </div>
 </div>
+
 </article>
 
 `
