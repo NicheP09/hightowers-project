@@ -594,7 +594,7 @@ section{
   left: 0;
   transition: all 0.30s ease;
    background-attachment: scroll;
-   border-bottom: 2px solid rgb(229, 228, 228);
+   border-bottom: 4px solid rgb(229, 228, 228);
    z-index: 200;
   }
 
