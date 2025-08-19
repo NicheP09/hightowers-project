@@ -1,3 +1,13 @@
+const hamburger = document.querySelector('.hamburger-con');
+const navLinks = document.querySelector('.nav-links')
+
+
+hamburger.addEventListener('click', ()=> {
+  navLinks.classList.toggle('show')
+  hamburger.classList.toggle('isOpen')
+})
+
+
 const observer = new IntersectionObserver(entries  => {
   if (entries[0].isIntersecting) {
    heroCon.classList.add('isAnimate')

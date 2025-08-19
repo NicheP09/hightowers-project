@@ -132,17 +132,17 @@ nav {
   background-color: white;
   border-radius: 5px;
   cursor: pointer;
-  transition: all 0.3s ease;
+  transition: all 0.4s ease;
 }
 
-.hamburger-con:hover .btn2 {
+.isOpen .btn2 {
  opacity:0
 }
 
-.hamburger-con:hover .btn1 {
+.isOpen .btn1 {
   transform: rotate(45deg) translate(7px, 7px);
 }
-.hamburger-con:hover .btn3 {
+.isOpen  .btn3 {
   transform: rotate(-45deg) translate(7px, -7px);
 }
 
@@ -608,10 +608,10 @@ section{
   width: 100%;
   text-align: center;
   background: var(--clr-bg-100);
- 
   padding-block: var(--padding-50); 
   font-weight: var(--ft-w-bold);
-  font-size: var(--fts-s)
+  font-size: var(--fts-s);
+  
 }
 .btm a {
   background: white;
@@ -624,15 +624,6 @@ section{
  .hamburger-con {
   display: block;
   }
-
-  .hamburger-con:hover +  .nav-links {
-  display: flex;
-  transform-origin: top center;
-  transition: all 0.20s;
-  animation: dropDown 0.30s forwards;
-
- 
-}
 
 
 }
@@ -755,11 +746,14 @@ section{
  
 }
 
-
+.show {
+   display: flex;
+  animation: dropDown .40s .10s forwards;
+}
 
 @keyframes dropDown {
   from {
-    transform: translateY(-100%)
+    transform: translateY(-70%)
   }
  
   to {
