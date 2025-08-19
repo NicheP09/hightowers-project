@@ -301,6 +301,8 @@ section{
   width: 100%;
 
 }
+
+
 .sect {
   padding-top: 4.5rem;
     color: var(--clr-text-0);
@@ -324,7 +326,7 @@ section{
 .article-grid {
   display: grid;
   align-items: start;
-  padding-inline: 2rem;
+  padding-inline: 1rem;
 }
 
 
