@@ -385,7 +385,7 @@ section{
 
 }
 .journey-header {
-  margin-bottom: 10px;
+  margin-bottom: 30px;
 }
 
 .journey-bg span i {
@@ -416,13 +416,13 @@ section{
   opacity: 0;
   z-index: 1;
   transition: all 0.30s;
-  transform: translateY(50%);
+  transform: translateY(60%);
   pointer-events: none;
 
 }
 .journey-article:hover   .appear {
   opacity: 1;
-  transform: translateY(5%);
+  transform: translateY(0);
 }
 
 
