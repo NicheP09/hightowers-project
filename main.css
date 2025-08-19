@@ -227,9 +227,6 @@ section{
   
 }
 
-.hero  p, .hero h1, .hero .hero-image, .bookTrip-con {
-  opacity: 0;
-}
 
 
 .hero h1 {
@@ -293,9 +290,7 @@ section{
 
   transform: translate(-50%, -50%) rotate(90deg);
 }
-.hero-image {
-    opacity: 0;
-}
+
 .hero-image img {
   display: flex;
   width: 100%;
@@ -372,7 +367,7 @@ section{
 
 .journey-grid {
   display: grid;
-  gap: 40px;
+  gap: 60px;
   
 }
 
@@ -411,20 +406,20 @@ section{
   left: 0;
   right: 0;
   bottom: 0;
-  top: -55px;
+  top: -60px;
   padding: var(--padding-30) ;
   color: var(--clr-text-1);
   border-radius: 20px 20px 0 0 ;
   opacity: 0;
   z-index: 1;
-  transition: all 0.40s;
-  transform: translateY(10%);
+  transition: all 0.40s .2s;
+  transform: translateY(50%);
   pointer-events: none;
 
 }
 .journey-article:hover   .appear {
   opacity: 1;
-  transform: translateY(0);
+  transform: translateY(5%);
 }
 
 
@@ -499,21 +494,21 @@ section{
   background: none;
 }
 .isAnimateHero  p, .isAnimate .enjoy-desc h2 {
-   animation: BTT 0.60s 1s ease forwards;
+   animation: BTT 0.60s .5s ease forwards;
 }
 
 .isAnimateHero h1, .isAnimate .enjoy-desc .pone {
-   animation: BTT 0.70s 1.5s ease forwards;
+   animation: BTT 0.70s .7s ease forwards;
 }
 .isAnimateHero  .bookTrip-con, .isAnimate .enjoy-desc .psec {
-   animation: BTT 0.80s 2s ease forwards;
+   animation: BTT 0.80s .8s ease forwards;
 }
 
 .isAnimateHero  .bookTrip-con, .isAnimate .enjoy-desc .caption-book {
-   animation: BTT 0.90s 2.5s ease forwards;
+   animation: BTT .90s 1s ease forwards;
 }
 .isAnimate .hero-image {
-  animation: RTL 2s 0.20s ease forwards;
+  animation: RTL 2s .30s ease forwards;
 }
 
 .isAnimate .enjoy-img-con {
@@ -565,10 +560,10 @@ section{
   }
 
   .journey-grid {
-    row-gap: 50px;
+    row-gap: 80px;
   }
   .appear {
-    top: -70px;
+    top: -80px;
 
   }
 
@@ -594,7 +589,7 @@ section{
   left: 0;
   transition: all 0.30s ease;
    background-attachment: scroll;
-   border-bottom: 4px solid rgb(229, 228, 228);
+   
    z-index: 200;
   }
 
@@ -605,13 +600,13 @@ section{
   position: absolute;
   right: 0;
   left: 0;
-  top: -25px;
+  top: -16px;
   width: 100%;
   text-align: center;
   background: var(--clr-bg-100);
   padding-block: 30px var(--padding-50); 
   font-weight: var(--ft-w-bold);
-  font-size: var(--fts-s);
+  font-size: var(--fts-xs);
   
 }
 .btm a {
@@ -620,6 +615,8 @@ section{
   border-radius: 30px;
   color:var(--clr-primary);
   font-weight: var(--ft-w-bold);
+
+  
 }
 
  .hamburger-con {
@@ -751,7 +748,9 @@ section{
    display: flex;
   animation: dropDown .40s .10s forwards;
 }
-
+.border-bottom {
+  border-bottom: 1px solid rgb(236, 236, 236);
+}
 @keyframes dropDown {
   from {
     transform: translateY(-70%)

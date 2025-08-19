@@ -1,11 +1,14 @@
 const hamburger = document.querySelector('.hamburger-con');
 const navLinks = document.querySelector('.nav-links')
+const nav = document.querySelector('nav')
 
 
 hamburger.addEventListener('click', ()=> {
   navLinks.classList.toggle('show')
+  nav.classList.toggle('border-bottom')
   hamburger.classList.toggle('isOpen')
 })
+
 
 
 const observer = new IntersectionObserver(entries  => {
