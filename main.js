@@ -1,3 +1,7 @@
+import { testimonialsDetails } from "./data.js";
+
+
+
 const hamburger = document.querySelector('.hamburger-con');
 const navLinks = document.querySelector('.nav-links')
 const nav = document.querySelector('nav')
@@ -77,3 +81,47 @@ interSectArray("observerEnjoy",enjoy);
 interSectArray("observerCard",card)
 
 interSectArray("observerDicover",discoverGrid, 0.2);
+
+
+
+
+function renderTestimonials() {
+let testimonialHtml ='';
+
+testimonialsDetails.forEach(testimony => {
+
+ testimonialHtml += `
+
+<article class="testimonial-card">
+<div class="testimonial-content">
+
+  <div class="rating-stars">
+      <span><i class="ri-star-fill"></i></span>
+      <span><i class="ri-star-fill"></i></span>
+      <span><i class="ri-star-fill"></i></span>
+      <span><i class="ri-star-fill"></i></span>
+      <span><i class="ri-star-fill"></i></span>
+</div>
+  </div>
+<p>
+${testimony.desc}  
+</p>
+<div class="profile">
+<div class="profile-img">
+  <img src=${testimony.dp} alt="user-dp" with=" 100">
+</div>
+<h4>${testimony.name}</h4>
+<h5>${testimony.occupation}</h5>
+</div>
+</article>
+
+`
+
+})
+
+const testimonialsGrid = document.querySelector('.testimonials-grid');
+testimonialsGrid.innerHTML = testimonialHtml;
+
+
+}
+renderTestimonials()

@@ -524,7 +524,7 @@ section{
 }
 
 
-.discover-con {
+.discover-con,.testimonials-con {
 padding-inline: 2rem;
 }
 
@@ -553,7 +553,7 @@ padding-inline: 2rem;
   border-radius: 50%;
 }
 
-.discover-card i {
+ i {
   color: var(--clr-primary);
   font-size: 24px;
 }
@@ -565,6 +565,20 @@ padding-inline: 2rem;
   margin-inline: auto;
   font-weight: 700;
 }
+
+.testimonials-grid {
+  display: grid;
+}
+
+.testimonial-card {
+  padding: 5px;
+  background-color:#f3f4f6;
+  border-radius: 1rem;
+}
+.testimonial-content {
+  background: #ffff;
+}
+
  
 .isAnimateHero  p, .isAnimate .enjoy-desc h2 {
    animation: BTT 0.60s .5s ease forwards;
