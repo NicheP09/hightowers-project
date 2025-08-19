@@ -594,7 +594,8 @@ section{
   left: 0;
   transition: all 0.30s ease;
    background-attachment: scroll;
-   border-bottom: 2px solid whitesmoke;
+   border-bottom: 2px solid rgb(229, 228, 228);
+   z-index: 200;
   }
 
   .nav-links {
@@ -604,11 +605,11 @@ section{
   position: absolute;
   right: 0;
   left: 0;
-  top: -30px;
+  top: -25px;
   width: 100%;
   text-align: center;
   background: var(--clr-bg-100);
-  padding-block: var(--padding-50); 
+  padding-block: 30px var(--padding-50); 
   font-weight: var(--ft-w-bold);
   font-size: var(--fts-s);
   
