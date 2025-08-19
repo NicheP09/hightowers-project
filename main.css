@@ -460,11 +460,13 @@ section{
 }
 .enjoy-desc h2 {
   padding-block: var(--padding-20);
+  font-size: 16px;
 }
 
 .enjoy-desc p {
   margin-bottom: var(--margin-20);
   color: var(--clr-text-1a);
+  font-size: 14px;
 }
 
 .enjoy-desc .psec {
@@ -680,7 +682,9 @@ section{
     gap: 30px;
     padding-inline: 3rem;
    
-  
+  }
+  .journey-grid {
+    padding-inline: 0;
   }
   .enjoy-grid {
     grid-template-columns: 400px 1fr;
