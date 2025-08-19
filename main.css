@@ -416,7 +416,7 @@ section{
   opacity: 0;
   z-index: 1;
   transition: all 0.30s;
-  transform: translateY(100%);
+  transform: translateY(10%);
   pointer-events: none;
 
 }
