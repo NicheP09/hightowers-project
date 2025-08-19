@@ -417,7 +417,7 @@ section{
   border-radius: 20px 20px 0 0 ;
   opacity: 0;
   z-index: 1;
-  transition: all 0.30s;
+  transition: all 0.40s;
   transform: translateY(10%);
   pointer-events: none;
 
@@ -498,29 +498,37 @@ section{
   font-weight: inherit;
   background: none;
 }
-.isAnimateHero  p {
-   animation: BTT 0.60s 0.20s ease forwards;
+.isAnimateHero  p, .isAnimate .enjoy-desc h2 {
+   animation: BTT 0.60s 1s ease forwards;
 }
 
-.isAnimateHero h1 {
-   animation: BTT 0.70s 0.40s ease forwards;
+.isAnimateHero h1, .isAnimate .enjoy-desc .pone {
+   animation: BTT 0.70s 1.5s ease forwards;
 }
-.isAnimateHero  .bookTrip-con {
-   animation: BTT 0.60s 0.80s ease forwards;
+.isAnimateHero  .bookTrip-con, .isAnimate .enjoy-desc .psec {
+   animation: BTT 0.80s 2s ease forwards;
+}
+
+.isAnimateHero  .bookTrip-con, .isAnimate .enjoy-desc .caption-book {
+   animation: BTT 0.90s 2.5s ease forwards;
 }
 .isAnimate .hero-image {
-  animation: RTL 0.80s 0.100s ease forwards;
+  animation: RTL 2s 0.20s ease forwards;
+}
+
+.isAnimate .enjoy-img-con {
+  animation: LTR 2s  ease forwards;
 }
 
 
-.animateDesti {
-  animation: BTT 0.30s 0.20s ease-in forwards;
+.animateDesti  {
+  animation: BTT 1s 1s ease-in forwards;
 }
 
 
 @keyframes BTT {
   from {
-    transform: translateY(100%);
+    transform: translateY(80%);
     opacity: 0;
   }
   to {
@@ -539,6 +547,16 @@ section{
      opacity: 1;
   }
 }
+@keyframes LTR {
+  from {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+     opacity: 1;
+  }
+}
 
 @media (width > 540px) {
  .grid {
@@ -548,6 +566,10 @@ section{
 
   .journey-grid {
     row-gap: 50px;
+  }
+  .appear {
+    top: -70px;
+
   }
 
   .enjoy-grid {
@@ -571,8 +593,10 @@ section{
   right: 0;
   left: 0;
   transition: all 0.30s ease;
-  background-attachment: scroll;
+   background-attachment: scroll;
+   border-bottom: 2px solid whitesmoke;
   }
+
   .nav-links {
   display: none;
   flex-direction: column;
@@ -580,12 +604,21 @@ section{
   position: absolute;
   right: 0;
   left: 0;
-  top: 0;
+  top: -30px;
   width: 100%;
   text-align: center;
   background: var(--clr-bg-100);
-  padding: var(--padding-20);  
-  font-weight: 500;
+ 
+  padding-block: var(--padding-50); 
+  font-weight: var(--ft-w-bold);
+  font-size: var(--fts-s)
+}
+.btm a {
+  background: white;
+  padding: 15px 20px;
+  border-radius: 30px;
+  color:var(--clr-primary);
+  font-weight: var(--ft-w-bold);
 }
 
  .hamburger-con {

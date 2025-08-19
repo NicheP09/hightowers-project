@@ -39,3 +39,24 @@ const staggerObserver = new IntersectionObserver((entries) => {
 
 if (articleGrid) staggerObserver.observe(articleGrid);
 
+
+
+const observer2 = new IntersectionObserver(entries  => {
+  if (entries[0].isIntersecting) {
+   enjoy.classList.add('isAnimate')
+ 
+  
+   
+  }else {
+    enjoy.classList.remove('isAnimate')
+    
+   
+ 
+  
+  }
+}, {threshold: 0.5})
+
+const enjoy= document.querySelector('.enjoy-grid');
+
+
+observer2.observe(enjoy )
