@@ -409,18 +409,21 @@ section{
   left: 0;
   right: 0;
   bottom: 0;
-  top: -35px;
+  top: -30%;
   padding: var(--padding-30) ;
   color: var(--clr-text-1);
   border-radius: 20px 20px 0 0 ;
   opacity: 0;
   z-index: 1;
   transition: all 0.30s;
-  transform: translateY(10%);
+  transform: translateY(50%);
   pointer-events: none;
 
 }
-
+.journey-article:hover   .appear {
+  opacity: 1;
+  transform: translateY(5%);
+}
 
 
 .journey-icon i {
@@ -432,17 +435,14 @@ section{
 
 .appear h3 {
   margin-block: var(--padding-20);
-  font-size: 12px;
+  font-size: 14px;
 }
 .appear p {
-  font-size: 10px;
+  font-size: 12px;
 }
 
 
-.journey-article:hover   .appear {
-  opacity: 1;
-  transform: translateY(0);
-}
+
 
 .enjoy-grid {
   display: grid;
@@ -541,6 +541,10 @@ section{
  .grid {
     grid-template-columns: 1fr 1fr;
     gap: 20px;
+  }
+
+  .journey-grid {
+    row-gap: 50px;
   }
 
   .enjoy-grid {
