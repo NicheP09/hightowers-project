@@ -84,7 +84,7 @@ body {
 }
 
 header {
-  padding-bottom: 100px;
+  margin-bottom: 100px;
 }
 
 nav {
@@ -115,6 +115,7 @@ nav {
   padding-right: 16px;
   cursor: pointer;
   order: 3;
+ transition: all .10s  ease-in;
 }
 .hamburger {
   width: 24px;
@@ -125,6 +126,7 @@ nav {
   flex-direction: column;
   justify-content: space-between;
   cursor: pointer;
+   
 }
 .ham {
   width: 25px;
@@ -132,11 +134,11 @@ nav {
   background-color: white;
   border-radius: 5px;
   cursor: pointer;
-  transition: all 0.4s ease;
+  transition: all .10s  ease-in;
 }
 
 .isOpen .btn2 {
- opacity:0
+ opacity:0;
 }
 
 .isOpen .btn1 {
@@ -452,7 +454,6 @@ section{
 .enjoy-img-con img {
   width: 100%;
   box-shadow: var(--b-shadow);
-  max-width: 400px;
 
 }
 .enjoy-desc h2 {
@@ -493,18 +494,46 @@ section{
   font-weight: inherit;
   background: none;
 }
+
+
+.card-sect {
+  padding: 5rem 3rem;
+  margin-inline: auto;
+}
+.card-grid {
+ display: grid;
+ gap: 2rem;
+
+}
+
+.card {
+  background-color: #f3f4f6;
+  box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  padding: 2rem 1rem;
+  border-radius: 2rem;
+  font-weight: 500;
+}
+.card p {
+  color: var(--clr-text-1a)
+}
+
+.card h4 {
+   font-size: 5rem;
+   color: var(--clr-primary);
+}
 .isAnimateHero  p, .isAnimate .enjoy-desc h2 {
    animation: BTT 0.60s .5s ease forwards;
 }
 
-.isAnimateHero h1, .isAnimate .enjoy-desc .pone {
+.isAnimateHero h1, .isAnimate .enjoy-desc .pone, .isAnimate .card-one {
    animation: BTT 0.70s .7s ease forwards;
 }
-.isAnimateHero  .bookTrip-con, .isAnimate .enjoy-desc .psec {
+.isAnimateHero  .bookTrip-con, .isAnimate .enjoy-desc .psec, .isAnimate .card-two {
    animation: BTT 0.80s .8s ease forwards;
 }
 
-.isAnimateHero  .bookTrip-con, .isAnimate .enjoy-desc .caption-book {
+.isAnimateHero  .bookTrip-con, .isAnimate .enjoy-desc .caption-book, .isAnimate .card-three {
    animation: BTT .90s 1s ease forwards;
 }
 .isAnimate .hero-image {
@@ -519,6 +548,8 @@ section{
 .animateDesti  {
   animation: BTT 1s 1s ease-in forwards;
 }
+
+
 
 
 @keyframes BTT {
@@ -572,10 +603,18 @@ section{
     align-items: center;
     gap: 1rem;
   }
+  .card-grid {
+
+ gap: 2rem;
+
+}
  
  
 }
 @media (max-width: 767px) {
+  header {
+    background: var(--clr-bg-100);
+  }
   nav {
 
   height: 80px;
@@ -588,7 +627,7 @@ section{
   right: 0;
   left: 0;
   transition: all 0.30s ease;
-   background-attachment: scroll;
+  background-attachment: scroll;
    
    z-index: 200;
   }
@@ -629,7 +668,7 @@ section{
 
 @media (width > 768px ) {
   header {
-    padding-bottom: 0;
+   margin-bottom: 0;
   }
   .nav-con {
     display: flex;

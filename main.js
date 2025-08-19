@@ -1,7 +1,10 @@
 const hamburger = document.querySelector('.hamburger-con');
 const navLinks = document.querySelector('.nav-links')
 const nav = document.querySelector('nav')
-
+const heroCon= document.querySelector('.hero-con');
+const hero= document.querySelector('.hero');
+const enjoy= document.querySelector('.enjoy-grid');
+const card= document.querySelector('.card-grid');
 
 hamburger.addEventListener('click', ()=> {
   navLinks.classList.toggle('show')
@@ -10,58 +13,47 @@ hamburger.addEventListener('click', ()=> {
 })
 
 
+function interSect(funcName,elem,type) {
 
-const observer = new IntersectionObserver(entries  => {
+  funcName = new IntersectionObserver(entries  => {
   if (entries[0].isIntersecting) {
-   heroCon.classList.add('isAnimate')
-   hero.classList.add('isAnimateHero')
-  
-   console.log('seen')
+  elem.classList.add(`${type}`)
   }else {
-    heroCon.classList.remove('isAnimate')
-    hero.classList.remove('isAnimateHero')
+   elem.classList.remove(`${type}`)
    
- 
-    console.log('not')
   }
 }, {threshold: 0.5})
 
-const heroCon= document.querySelector('.hero-con');
-const hero= document.querySelector('.hero');
 
-observer.observe(heroCon )
-observer.observe(hero )
+
+funcName.observe(heroCon )
+funcName.observe(hero )
+}
+
+interSect("observerHero",hero, "isAnimateHero")
+interSect("observerHero",heroCon, "isAnimate")
+
+
 
 
 const articleGrid = document.querySelector('.article-grid');
 const destiCards = document.querySelectorAll('.desti-card');
 
-const staggerObserver = new IntersectionObserver((entries) => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      destiCards.forEach((card, i) => {
-        setTimeout(() => {
-          card.classList.add('animateDesti');
-        }, i * 300); 
-      });
-    } else {
-      destiCards.forEach(card => card.classList.remove('animateDesti'));
-    }
-  });
-}, { threshold: 0.6 });
-
-if (articleGrid) staggerObserver.observe(articleGrid);
 
 
 
-const observer2 = new IntersectionObserver(entries  => {
+interSectArray('destiGrid', articleGrid)
+
+function interSectArray(observer,elem) {
+
+  const obsever = new IntersectionObserver(entries  => {
   if (entries[0].isIntersecting) {
-   enjoy.classList.add('isAnimate')
+   elem.classList.add('isAnimate')
  
   
    
   }else {
-    enjoy.classList.remove('isAnimate')
+    elem.classList.remove('isAnimate')
     
    
  
@@ -69,7 +61,15 @@ const observer2 = new IntersectionObserver(entries  => {
   }
 }, {threshold: 0.5})
 
-const enjoy= document.querySelector('.enjoy-grid');
 
 
-observer2.observe(enjoy )
+
+obsever.observe(elem )
+
+}
+
+
+
+
+interSectArray("observerEnjoy",enjoy, "isAnimate");
+interSectArray("observerCard",card, "isAnimate")
