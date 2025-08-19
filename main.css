@@ -380,7 +380,7 @@ section{
   background:  #f3f4f6;
   padding: 1.2rem;
   border-radius: 1rem 1rem 0 0;
-
+ 
   cursor: pointer;
 
 }
@@ -409,14 +409,14 @@ section{
   left: 0;
   right: 0;
   bottom: 0;
-  top: -23%;
+  top: -35px;
   padding: var(--padding-30) ;
   color: var(--clr-text-1);
   border-radius: 20px 20px 0 0 ;
   opacity: 0;
   z-index: 1;
   transition: all 0.30s;
-  transform: translateY(5%);
+  transform: translateY(100%);
   pointer-events: none;
 
 }
