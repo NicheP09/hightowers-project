@@ -310,7 +310,7 @@ section{
 
 }
 .sect-header{
-    padding-block: 4.5rem;
+    padding-block: 4rem;
 }
 .sect-header h2 {
   font-size: var(--fts-norm);
@@ -522,6 +522,50 @@ section{
    font-size: 5rem;
    color: var(--clr-primary);
 }
+
+
+.discover-con {
+padding-inline: 2rem;
+}
+
+.discover-head {
+  padding-block: 3rem;
+}
+.discover-head p {
+  color: var(--clr-text-1a);
+}
+
+.discover-grid {
+  display: grid;
+  gap: 2rem;
+}
+
+.discover-card {
+  border: 1px dotted var(--clr-primary);
+  border-radius: 1rem;
+  text-align: center;
+  padding: 2rem;
+}
+.discover-card span {
+  display: inline-block;
+  background-color: rgba(40, 135, 255, 0.1);
+  padding: 10px 15px;
+  border-radius: 50%;
+}
+
+.discover-card i {
+  color: var(--clr-primary);
+  font-size: 24px;
+}
+
+.discover-card h4 {
+  font-size: 1.2rem;
+   margin-block: 20px;
+  max-width:  150px;
+  margin-inline: auto;
+  font-weight: 700;
+}
+ 
 .isAnimateHero  p, .isAnimate .enjoy-desc h2 {
    animation: BTT 0.60s .5s ease forwards;
 }
@@ -545,9 +589,7 @@ section{
 }
 
 
-.animateDesti  {
-  animation: BTT 1s 1s ease-in forwards;
-}
+
 
 
 
@@ -594,7 +636,7 @@ section{
     row-gap: 80px;
   }
   .appear {
-    top: -80px;
+    top: -90px;
 
   }
 
@@ -603,9 +645,9 @@ section{
     align-items: center;
     gap: 1rem;
   }
-  .card-grid {
+  .card-grid, .discover-grid {
 
- gap: 2rem;
+   gap: 2rem;
 
 }
  
@@ -755,7 +797,10 @@ section{
   .enjoy-grid {
     grid-template-columns: 1fr 2fr;
   }
-
+ .card-grid,.discover-grid {
+     gap: 2rem;
+    padding-inline: 0;
+  }
   
 
 }
@@ -773,10 +818,15 @@ section{
     max-width: 1200px;
     margin-inline: auto;
   }
-  .journey-grid {
+  .journey-grid,.discover-grid, .card-grid {
     gap: 1rem;
     padding-inline: 0;
   }
+   .card-grid {
+      gap: 2rem;
+    padding-inline: 0;
+   }
+
   
  
 

@@ -3,8 +3,12 @@ const navLinks = document.querySelector('.nav-links')
 const nav = document.querySelector('nav')
 const heroCon= document.querySelector('.hero-con');
 const hero= document.querySelector('.hero');
+const articleGrid = document.querySelector('.article-grid');
+const destiCards = document.querySelectorAll('.desti-card');
+
 const enjoy= document.querySelector('.enjoy-grid');
 const card= document.querySelector('.card-grid');
+const  discoverGrid= document.querySelector('.discover-grid');
 
 hamburger.addEventListener('click', ()=> {
   navLinks.classList.toggle('show')
@@ -36,15 +40,13 @@ interSect("observerHero",heroCon, "isAnimate")
 
 
 
-const articleGrid = document.querySelector('.article-grid');
-const destiCards = document.querySelectorAll('.desti-card');
 
 
 
 
 interSectArray('destiGrid', articleGrid)
 
-function interSectArray(observer,elem) {
+function interSectArray(observer,elem, thresh=0.5) {
 
   const obsever = new IntersectionObserver(entries  => {
   if (entries[0].isIntersecting) {
@@ -59,7 +61,7 @@ function interSectArray(observer,elem) {
  
   
   }
-}, {threshold: 0.5})
+}, {threshold: thresh})
 
 
 
@@ -71,5 +73,7 @@ obsever.observe(elem )
 
 
 
-interSectArray("observerEnjoy",enjoy, "isAnimate");
-interSectArray("observerCard",card, "isAnimate")
+interSectArray("observerEnjoy",enjoy);
+interSectArray("observerCard",card)
+
+interSectArray("observerDicover",discoverGrid, 0.2);
