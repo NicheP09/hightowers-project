@@ -552,9 +552,7 @@ section{
     align-items: center;
     gap: 1rem;
   }
-  .enjoy-img-con img{
-    min-width: 300px;
-  }
+ 
  
 }
 @media (max-width: 767px) {
@@ -691,7 +689,7 @@ section{
     padding-inline: 0;
   }
   .enjoy-grid {
-    grid-template-columns: 400px 1fr;
+    grid-template-columns: 1fr 2fr;
   }
 
   
