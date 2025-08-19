@@ -460,13 +460,13 @@ section{
 }
 .enjoy-desc h2 {
   padding-block: var(--padding-20);
-  font-size: 16px;
+
 }
 
 .enjoy-desc p {
   margin-bottom: var(--margin-20);
   color: var(--clr-text-1a);
-  font-size: 14px;
+  font-size: 12px;
 }
 
 .enjoy-desc .psec {
