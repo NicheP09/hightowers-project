@@ -279,8 +279,12 @@ section{
   justify-content: center;
   column-gap: 20px;
   cursor: pointer;
-
+  transition: background-color 0.4s ease-in-out;
 }
+.bookTrip:hover, .bookTrip:focus  {
+  background-color: #073a77;
+}
+
 .play {
   width: 50px;
   height: 50px;
@@ -290,6 +294,10 @@ section{
   position: relative;
   background-color: white;
   z-index: 10;
+  transition: background-color 0.4s;
+}
+.play:hover, .play:focus {
+   background-color: var(--clr-primary);
 }
 
 .play::before {
@@ -305,6 +313,10 @@ section{
 
 }
 
+ .play:hover::before, .play:focus::before {
+  background-color: white;
+}
+
 .play::after {
   position: absolute;
   content: '';
@@ -312,12 +324,15 @@ section{
   height: 0;
   border-style: solid;
   border-width: 0 5px 6px 5px;
-  border-color:  transparent transparent#fcfcfc transparent;
-  
+  border-color:  transparent transparent#fcfcfc;
   top: 50%;
   left: 53%;
 
   transform: translate(-50%, -50%) rotate(90deg);
+}
+
+.play:hover::after, .play:focus::after {
+border-color:  transparent transparent var(--clr-primary);
 }
 
 .hero-image img {
@@ -646,7 +661,7 @@ padding-inline: 2rem;
   min-width: 350px;
 }
 
-.swiper-slide:hover, .swiper-slide:active {
+.swiper-slide:hover, .swiper-slide:active, .swiper-slide:hover {
   background-color: var(--clr-primary);
 }
 
