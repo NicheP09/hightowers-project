@@ -107,15 +107,11 @@ nav {
   font-family: inherit;
   font-weight: var(--ft-w-bold);
   transition: transform 1s cubic-bezier(0.4, 0, 0.2, 1) .10, opacity 1s cubic-bezier(0.4, 0, 0.2, 1).10;
-  transform: translateY(-100%);
-  opacity: 0;
-  visibility: hidden;
-  pointer-events: none;
+
 }
 .nav-links a {
-  color: white;
+  color: var(--clr-primary);
 }
-
 .nav-links.active {
   display: flex;
   transform: translateY(96px);
@@ -134,14 +130,16 @@ opacity: 1;
 .hamburger {
   width: 24px;
   height:24px;
-  background: transparent;
-  border: transparent;
+  background: none;
+  border: none;
+  cursor: pointer;
+  outline: none;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  cursor: pointer;
-   
+  transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1), color 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
+
 .ham {
   width: 25px;
   height: 4px;
@@ -160,6 +158,11 @@ opacity: 1;
 }
 .isOpen  .btn3 {
   transform: rotate(-45deg) translate(7px, -7px);
+}
+
+.hamburger.active {
+  transform: rotate(90deg) scale(1.1);
+  color: #0077ff;
 }
 
 
@@ -859,8 +862,14 @@ form button {
   padding-block: 30px var(--padding-50); 
   font-weight: var(--ft-w-bold);
   font-size: var(--fts-xs);
+  transform: translateY(-100%);
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
   
-  
+}
+.nav-links a {
+  color: white;
 }
 .btm a {
   background: white;
@@ -911,6 +920,11 @@ form button {
 .header-btn {
   appearance: auto;
   display: flex;
+  
+}
+
+.header-btn a {
+  color: var(--clr-primary);
 }
 
 .hero-wrapper {
