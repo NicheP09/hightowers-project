@@ -619,19 +619,15 @@ padding-inline: 2rem;
 .discover-card p {
   font-size: 14px;
 }
-.testimonials-grid {
-  display: grid;
-  gap: 1rem;
-  grid-auto-flow: column;
-  grid-auto-columns: minmax(400px, auto);
-  max-height: 400px;
-  overflow: hidden;
-}
 
 .testimonial-card {
   padding: 5px;
   background-color:#f3f4f6 ;
   border-radius: 1rem;
+  transition: background-color 0.4s;
+}
+.testimonial-card:hover {
+   background-color: var(--clr-primary);
 }
 
 .swiper {
@@ -640,7 +636,7 @@ padding-inline: 2rem;
   overflow: hidden;
   list-style: none;
   padding: 0;
-  height:330px;
+
 }
 
 .swiper-wrapper {
@@ -659,10 +655,10 @@ padding-inline: 2rem;
   position: relative;
   transition-property: transform;
   display: block;
-  min-width: 350px;
+  min-width: 375px;
 }
 
-.swiper-slide:hover, .swiper-slide:active, .swiper-slide:hover {
+.swiper-slide:active {
   background-color: var(--clr-primary);
 }
 
