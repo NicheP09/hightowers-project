@@ -613,7 +613,90 @@ font-size: 1.2rem;
   font-size: 1rem;
   font-weight: 500;
 }
+
+footer {
+  background-color: #f3f4f6;
+  margin-top: 4rem;
+}
  
+.footer-con {
+  padding: 4rem;
+  display: grid;
+  padding-bottom: 6rem;
+}
+
+.footer-logo {
+  padding-block: 2rem;
+  font-size: 1.8rem;
+
+}
+a {
+  text-decoration: none;
+    color: black
+}
+footer p {
+  color: var(--clr-text-1a);
+}
+
+.footer__socials {
+  display: flex;
+  gap: 1rem;
+  margin-block: 2rem  4rem;
+}
+.footer__socials i {
+  background: var(--clr-primary);
+  border-radius: 50%;
+  color: #ffff;
+  padding: 10px 10px;
+}
+
+footer h4 {
+  font-size: var(--fts-s);
+   padding-block: 1.6rem;
+}
+.footer__links li  {
+margin-bottom: 1rem;
+
+}
+.footer__links  a {
+
+color: var(--clr-text-1a);
+}
+i {
+  color: var(--clr-text-1a);
+}
+
+form {
+  display: grid;
+  gap: 1rem;
+   
+}
+form input, form button {
+
+  padding-block: 14px;
+  font-size: var(--fts-xs);
+    border-radius: 5px;
+ 
+}
+form input {
+  margin-top: 1rem;
+  border: 1px solid gray;
+
+}
+form input::placeholder {
+  padding: 10px;
+}
+form button {
+  background-color: var(--clr-primary);
+  color: var(--clr-text-1);
+  border: none;
+}
+
+.footer__bar {
+  color: var(--clr-text-1a);
+  text-align: center;
+  padding: 10px;
+}
 .isAnimateHero  p, .isAnimate .enjoy-desc h2 {
    animation: BTT 0.60s .5s ease forwards;
 }
@@ -697,6 +780,18 @@ font-size: 1.2rem;
 
    gap: 2rem;
 
+}
+
+.footer-con {
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  
+}
+.col-contact {
+  order: 4;
+}
+.col1 {
+  margin-top: 16px;
 }
  
  
@@ -849,8 +944,16 @@ font-size: 1.2rem;
      gap: 2rem;
     padding-inline: 0;
   }
+  .footer-con {
+  grid-auto-flow: column;
+  grid-auto-columns: 1fr;
+  gap: 2rem;
   
-
+}
+.col1 {
+  margin: 0;
+  max-width: 70px;
+}
 }
 
 @media (width > 1200px) {
