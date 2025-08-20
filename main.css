@@ -189,7 +189,7 @@ nav {
   font-family: Arial, Helvetica, sans-serif;
   font-size: 1rem;
   white-space: nowrap;
-  
+    cursor: pointer;
 }
 
 
@@ -278,11 +278,11 @@ section{
   align-items: center;
   justify-content: center;
   column-gap: 20px;
-  cursor: pointer;
+
   transition: background-color 0.4s ease-in-out;
 }
 .bookTrip:hover, .bookTrip:focus  {
-  background-color: #073a77;
+  background-color: rgb(11, 102, 212);
 }
 
 .play {
@@ -295,6 +295,7 @@ section{
   background-color: white;
   z-index: 10;
   transition: background-color 0.4s;
+    cursor: pointer;
 }
 .play:hover, .play:focus {
    background-color: var(--clr-primary);
@@ -738,6 +739,11 @@ footer p {
   border-radius: 50%;
   color: #ffff;
   padding: 10px 10px;
+  transition: background-color 0.4s;
+}
+
+.footer__socials i:hover {
+  background-color: rgb(11, 102, 212) ;
 }
 
 footer h4 {
