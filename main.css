@@ -89,33 +89,35 @@ header {
 nav {
   position: fixed;
   top: 0;
-  width: 100%; 
+  width: 100%;
   z-index: 100;
   display: flex;
   justify-content: space-between;
   align-items: center;
   transition: all 0.5s;
 }
+
 .logo {
   cursor: pointer;
 } 
 
 .nav-links {
-  display: flex;  
+  display: flex;
   column-gap: 2rem;
   cursor: pointer;
   font-family: inherit;
   font-weight: var(--ft-w-bold);
   transition: transform 1s cubic-bezier(0.4, 0, 0.2, 1) .10, opacity 1s cubic-bezier(0.4, 0, 0.2, 1).10;
-
 }
+
 .nav-links a {
   color: var(--clr-primary);
 }
+
 .nav-links.active {
   display: flex;
   transform: translateY(96px);
-opacity: 1;
+  opacity: 1;
   visibility: visible;
   pointer-events: auto;
 }
@@ -125,11 +127,12 @@ opacity: 1;
   padding-right: 16px;
   cursor: pointer;
   order: 3;
- transition: all .10s  ease-in;
+  transition: all .10s ease-in;
 }
+
 .hamburger {
   width: 24px;
-  height:24px;
+  height: 24px;
   background: none;
   border: none;
   cursor: pointer;
@@ -965,7 +968,7 @@ form button {
 }
 .play::before {
     gap: 30px;
-    padding-inline: 3rem;
+  
    
   }
   .journey-grid {
@@ -1023,6 +1026,22 @@ form button {
  
 
  
+}
+@media (max-width: 768px) {
+	nav {
+		position: relative;
+		width: 100%;
+	}
+	.nav-links {
+		position: absolute;
+		top: 60px;
+		left: 0;
+		width: 100%;
+		background: #fff;
+		box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+		z-index: 100;
+		/* ...other styles... */
+	}
 }
 
 
