@@ -92,6 +92,7 @@ testimonialsDetails.forEach(testimony => {
  testimonialHtml += `
 
 <article class="testimonial-card swiper-slide">
+<div class="content">
 <div class="testimonial-content">
 
   <div class="rating-stars">
@@ -114,6 +115,7 @@ ${testimony.desc}
 <div class="profile-details">
 <h4>${testimony.name}</h4>
 <h5>${testimony.occupation}</h5>
+ </div>
  </div>
 </div>
 
