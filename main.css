@@ -458,6 +458,7 @@ section{
   padding: var(--padding-10);
   border: 2px solid #ffff;
   border-radius: 50%;
+  color: #ffff;
   
 }
 
@@ -906,8 +907,7 @@ form button {
   width: 100%;
   text-align: center;
   background: var(--clr-bg-100);
-  padding-block: 30px var(--padding-50); 
-  padding-bottom: 40px;
+  padding-block: 40px; 
   font-weight: var(--ft-w-bold);
   font-size: var(--fts-xs);
   transform: translateY(-100%);
