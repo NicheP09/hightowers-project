@@ -12,11 +12,24 @@ const articleGrid = document.querySelector('.article-grid');
 const enjoy= document.querySelector('.enjoy-grid');
 const card= document.querySelector('.card-grid');
 const  discoverGrid= document.querySelector('.discover-grid');
+const links = document.querySelectorAll('.link')
 
 hamburger.addEventListener('click', ()=> {
   navLinks.classList.toggle('active')
  
   hamburger.classList.toggle('isOpen')
+})
+
+links.forEach(link => {
+  link.addEventListener('click', () =>{
+    
+    if (navLinks.classList.contains('active')){
+      navLinks.classList.remove('active');
+      hamburger.classList.remove('isOpen')
+
+     
+    }
+  })
 })
 
 
@@ -80,7 +93,6 @@ interSectArray("observerEnjoy",enjoy);
 interSectArray("observerCard",card)
 
 interSectArray("observerDicover",discoverGrid, 0.2);
-
 
 
 
