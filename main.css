@@ -625,6 +625,7 @@ padding-inline: 2rem;
   background-color:#f3f4f6 ;
   border-radius: 1rem;
   transition: background-color 0.4s;
+
 }
 .testimonial-card:hover {
    background-color: var(--clr-primary);
@@ -636,7 +637,7 @@ padding-inline: 2rem;
   overflow: hidden;
   list-style: none;
   padding: 0;
-
+  height:350px;
 }
 
 .swiper-wrapper {
