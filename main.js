@@ -4,19 +4,18 @@ import { testimonialsDetails } from "./data.js";
 
 const hamburger = document.querySelector('.hamburger-con');
 const navLinks = document.querySelector('.nav-links')
-const nav = document.querySelector('nav')
+
 const heroCon= document.querySelector('.hero-con');
 const hero= document.querySelector('.hero');
 const articleGrid = document.querySelector('.article-grid');
-const destiCards = document.querySelectorAll('.desti-card');
 
 const enjoy= document.querySelector('.enjoy-grid');
 const card= document.querySelector('.card-grid');
 const  discoverGrid= document.querySelector('.discover-grid');
 
 hamburger.addEventListener('click', ()=> {
-  navLinks.classList.toggle('show')
-  nav.classList.toggle('border-bottom')
+  navLinks.classList.toggle('active')
+ 
   hamburger.classList.toggle('isOpen')
 })
 

@@ -1,5 +1,3 @@
-
-
 * {
   padding: 0;
   margin: 0;
@@ -22,7 +20,7 @@
   --padding-25: 25px;
   --padding-30: 30px;
   --padding-40: 40px;
-  --padding-50: 50px;
+  
  /* margin */
   --margin-5: 5px;
   --margin-10: 10px;
@@ -30,8 +28,8 @@
   --margin-20: 20px;
   --margin-25: 25px;
   --margin-30: 30px;
-  --margin-40: 40px;
-  --margin-50: 50px;
+  
+
 /* box-shadow */
 --b-shadow:  rgba(0, 0, 0, 0.2) 5px 5px 20px;
 /* font-sizes */
@@ -85,6 +83,7 @@ body {
 
 header {
   margin-bottom: 100px;
+  
 }
 
 nav {
@@ -95,10 +94,11 @@ nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  transition: all 0.5s;
 }
 .logo {
   cursor: pointer;
-}
+} 
 
 .nav-links {
   display: flex;  
@@ -106,12 +106,23 @@ nav {
   cursor: pointer;
   font-family: inherit;
   font-weight: var(--ft-w-bold);
+  transition: transform 1s cubic-bezier(0.4, 0, 0.2, 1) .10, opacity 1s cubic-bezier(0.4, 0, 0.2, 1).10;
+  transform: translateY(-100%);
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
 }
 .nav-links a {
   color: white;
 }
 
-
+.nav-links.active {
+  display: flex;
+  transform: translateY(96px);
+opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
 
 .hamburger-con {
   display: none;
@@ -939,15 +950,6 @@ form button {
   min-height: 60px;
 }
 .play::before {
-  width: 25px;
-  height: 25px;
-}
-.play::after {
-    border-width: 0 6px 8px 6px;
-}
-
- .grid {
-    grid-template-columns: 1fr 1fr 1fr;
     gap: 30px;
     padding-inline: 3rem;
    
@@ -1009,20 +1011,4 @@ form button {
  
 }
 
-.show {
-   display: flex;
-  animation: dropDown .40s .10s forwards;
-}
-.border-bottom {
-  border-bottom: 1px solid rgb(236, 236, 236);
-}
-@keyframes dropDown {
-  from {
-    transform: translateY(-70%)
-  }
- 
-  to {
-    transform: translateY(25%)
-  }
 
-}
