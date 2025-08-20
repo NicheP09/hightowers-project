@@ -116,10 +116,12 @@ nav {
 
 .nav-links.active {
   display: flex;
+  
   transform: translateY(96px);
   opacity: 1;
   visibility: visible;
   pointer-events: auto;
+ 
 }
 
 .hamburger-con {
@@ -648,6 +650,7 @@ footer {
   background-color: #f3f4f6;
   margin-top: 4rem;
   color: black;
+  line-height: 2;
 }
  
 .footer-con {
@@ -667,7 +670,7 @@ a {
 }
 footer p {
   color: var(--clr-text-1a);
-  font-size: 14px;
+
 }
 
 .footer__socials {
@@ -686,29 +689,39 @@ footer h4 {
   font-size: 1rem;
    padding-block: 1.6rem;
 }
+
+.footer__links {
+  display: grid;
+  gap: 1rem;
+}
 .footer__links li  {
 margin-bottom: 10px;
 
 }
-.footer__links  a {
 
-color: var(--clr-text-1a);
-
+.footer__links a {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--clr-text-1a);
 }
+
 footer i {
   color: var(--clr-text-1a);
+  
 }
 
 form {
   display: grid;
+  
   gap: 1rem;
    
 }
 form input, form button {
 
   padding-block: 14px;
-  font-size: var(--fts-xs);
-    border-radius: 5px;
+
+  border-radius: 5px;
  
 }
 form input {
@@ -824,10 +837,6 @@ form button {
 .col-contact {
   order: 4;
 }
-.col1 {
-  margin-top: 16px;
-}
- 
  
 }
 @media (max-width: 767px) {
@@ -860,9 +869,11 @@ form button {
   left: 0;
   top: -16px;
   width: 100%;
+  
   text-align: center;
   background: var(--clr-bg-100);
   padding-block: 30px var(--padding-50); 
+  padding-bottom: 40px;
   font-weight: var(--ft-w-bold);
   font-size: var(--fts-xs);
   transform: translateY(-100%);
@@ -977,25 +988,24 @@ form button {
   .enjoy-grid {
     grid-template-columns: 1fr 2fr;
   }
+
+  .col-sub {
+  order: 4;
+}
  .card-grid,.discover-grid {
      gap: 2rem;
     padding-inline: 0;
   }
   .footer-con {
-  grid-auto-flow: column;
-  grid-auto-columns:auto;
-  gap: 1rem;
-  padding-right: 200px;
+
+    grid-template-columns:2fr 1fr 1fr 1.5fr;
+    
+    gap: 1rem;
+
 }
-.footer__links  a  {
-  font-size: 5px;
-}
-.footer__links i {
-  font-size: 5px;
-} 
-.col-sub {
-  order: 4;
-}
+
+
+
 
 }
 
@@ -1022,26 +1032,10 @@ form button {
     padding-inline: 0;
    }
 
-  
- 
+
 
  
 }
-@media (max-width: 768px) {
-	nav {
-		position: relative;
-		width: 100%;
-	}
-	.nav-links {
-		position: absolute;
-		top: 60px;
-		left: 0;
-		width: 100%;
-		background: #fff;
-		box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-		z-index: 100;
-		/* ...other styles... */
-	}
-}
+
 
 
