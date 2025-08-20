@@ -91,7 +91,7 @@ testimonialsDetails.forEach(testimony => {
 
  testimonialHtml += `
 
-<article class="testimonial-card">
+<article class="testimonial-card swiper-slide">
 <div class="testimonial-content">
 
   <div class="rating-stars">
@@ -123,9 +123,19 @@ ${testimony.desc}
 
 })
 
-const testimonialsGrid = document.querySelector('.testimonials-grid');
-testimonialsGrid.innerHTML = testimonialHtml;
+const testimonialsSwiperWrap = document.querySelector('.swiper-wrapper');
+testimonialsSwiperWrap.innerHTML = testimonialHtml;
 
 
 }
 renderTestimonials()
+
+
+
+
+// Initialize Swiper
+const swiper = new Swiper(".swiper", {
+    slidesPerView: 3,
+    spaceBetween: 20,
+    loop: true,
+});

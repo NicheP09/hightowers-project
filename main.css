@@ -3,7 +3,9 @@
   margin: 0;
   box-sizing: border-box;
 }
-
+html {
+  scroll-behavior: smooth;
+}
 :root {
   /* text colors */
   --clr-bg-100: rgb(40, 135, 255);
@@ -104,7 +106,7 @@ nav {
 .nav-links {
   display: flex;
   column-gap: 2rem;
-  cursor: pointer;
+  
   font-family: inherit;
   font-weight: var(--ft-w-bold);
   transition: transform 1s cubic-bezier(0.4, 0, 0.2, 1) .10, opacity 1s cubic-bezier(0.4, 0, 0.2, 1).10;
@@ -112,17 +114,18 @@ nav {
 
 .nav-links a {
   color: var(--clr-primary);
+  display: inline-block;
+  cursor: pointer;
+  transition: transform .4s ease-in-out;
+    
 }
 
-.nav-links.active {
-  display: flex;
-  
-  transform: translateY(96px);
-  opacity: 1;
-  visibility: visible;
-  pointer-events: auto;
- 
+.nav-links a:hover, .nav-links a:focus {
+  transform: scale(1.2);
 }
+
+
+
 
 .hamburger-con {
   display: none;
@@ -186,8 +189,10 @@ nav {
   font-family: Arial, Helvetica, sans-serif;
   font-size: 1rem;
   white-space: nowrap;
-
+  
 }
+
+
 .btn-primary {
   color: var(--clr-text-1);
   background-color: var(--clr-primary);
@@ -346,6 +351,7 @@ section{
   display: grid;
   align-items: start;
   padding-inline: 1rem;
+  gap: 2rem 1rem;
 }
 
 
@@ -517,6 +523,9 @@ section{
   font-weight: inherit;
   background: none;
 }
+.caption-book i {
+  color: black
+}
 
 
 .card-sect {
@@ -599,9 +608,7 @@ padding-inline: 2rem;
   grid-auto-flow: column;
   grid-auto-columns: minmax(400px, auto);
   max-height: 400px;
-  
   overflow: hidden;
-
 }
 
 .testimonial-card {
@@ -609,17 +616,60 @@ padding-inline: 2rem;
   background-color:#f3f4f6 ;
   border-radius: 1rem;
 }
+
+.swiper {
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  overflow: hidden;
+  list-style: none;
+  padding: 0;
+  z-index: 1;
+  display: block;
+}
+
+.swiper-wrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  display: flex;
+
+  transition-property: transform;
+  transition-timing-function: var(--swiper-wrapper-transition-timing-function, initial);
+  box-sizing: content-box
+}
+
+.swiper-backface-hidden .swiper-slide {
+  transform: translateZ(0);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.swiper-slide {
+
+  
+}
+.swiper-slide {
+  flex-shrink: 0;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transition-property: transform;
+  display: block;
+    min-width: 375px;
+}
+
 .testimonial-content {
   background: #ffff;
   padding: 1rem;
   
 }
 .testimonial-content  i{
-  font-size: 12px;
+
   color: var(--clr-primary);
 }
 .testimonial-content p {
-  font-size: 12px;
   margin-top: 20px;
 }
 .profile {
@@ -809,7 +859,7 @@ form button {
     grid-template-columns: 1fr 1fr;
     gap: 20px;
   }
-
+  
   .journey-grid {
     row-gap: 80px;
   }
@@ -861,7 +911,7 @@ form button {
   }
 
   .nav-links {
-  display: none;
+  
   flex-direction: column;
   row-gap: 2rem;
   position: absolute;
@@ -869,7 +919,6 @@ form button {
   left: 0;
   top: -16px;
   width: 100%;
-  
   text-align: center;
   background: var(--clr-bg-100);
   padding-block: 30px var(--padding-50); 
@@ -877,13 +926,21 @@ form button {
   font-weight: var(--ft-w-bold);
   font-size: var(--fts-xs);
   transform: translateY(-100%);
-  opacity: 0;
   visibility: hidden;
-  pointer-events: none;
-  
+  display: flex;
 }
+
+.nav-links.active {
+  transform: translateY(96px);
+  visibility: visible;
+}
+
 .nav-links a {
   color: white;
+  
+}
+.btn {
+  transition: background-color .4s ease-in-out;
 }
 .btm a {
   background: white;
@@ -891,8 +948,15 @@ form button {
   border-radius: 30px;
   color:var(--clr-primary);
   font-weight: var(--ft-w-bold);
+  transition: all .4s ease-in-out;
+}
 
-  
+
+.btm a:hover, .btm a:focus {
+  background-color: var(--clr-primary);
+  box-shadow: var(--b-shadow);
+  color: white;
+  transform: scale(1);
 }
 
  .hamburger-con {
@@ -939,7 +1003,19 @@ form button {
 
 .header-btn a {
   color: var(--clr-primary);
+  transition: all 0.15s ease-in-out;
+
 }
+
+.header-btn:hover, .header-btn:focus, .btm:hover, .btm:focus {
+  background-color: var(--clr-primary);
+  
+}
+.header-btn:hover a, .btm a:hover, .btm a:focus {
+  color: white;
+}
+
+
 
 .hero-wrapper {
   padding: 32px 16px 10px 16px;
@@ -982,6 +1058,13 @@ form button {
   
    
   }
+  .grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .article-grid {
+    padding-inline: 4rem;
+  }
+ 
   .journey-grid {
     padding-inline: 0;
   }

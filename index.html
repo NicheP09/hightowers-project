@@ -8,7 +8,10 @@
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 	<link rel="stylesheet" href="main.css">
 	<title>HighTowers</title>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js" defer></script>
 	<script type="module" src="main.js"></script>
+
 </head>
 <body>
 	<div class="hightTowers-con">
@@ -23,11 +26,11 @@
 					</button>
 				</div>
 				<ul class="nav-links">
-					<li><a href="#">HOME</a></li>
-					<li><a href="#">ABOUT</a></li>
-					<li><a href="#">TOUR</a></li>
-					<li><a href="#">PACKAGE</a></li>
-					<li><a href="#">CONTACT</a></li>
+					<li ><a href="#home">HOME</a></li>
+					<li><a href="#about">ABOUT</a></li>
+					<li><a href="#tour">TOUR</a></li>
+					<li><a href="#package">PACKAGE</a></li>
+					<li><a href="#contact">CONTACT</a></li>
 					<li class="btm"><a href="#">BOOK TRIP</a></li>
 				</ul>
 				<button class="header-btn bookBtn"><a href="#">BOOK TRIP</a></button>
@@ -35,7 +38,7 @@
 		</header>
 		<main>
 			<section class="hero-wrapper">
-				<div class="hero-con">
+				<div id="home" class="hero-con">
 					<div class="hero">
 						<p>ELEVATE YOUR TRAVEL JOURNEY</p>
 						<h1>Experience The Magic Of <span class="white">Flight</span><span class="blue">!</span></h1>
@@ -49,7 +52,7 @@
 					</div>
 				</div>
 			</section>
-			<section class="sect">
+			<section id="about"  class="sect">
 				<div class="destination-con">
 					<div class="sect-header">
 						<h2>Popular Destination</h2>
@@ -95,7 +98,7 @@
 					</div>
 				</div>
 			</section>
-			<section class="sect">
+			<section id="tour" class="sect">
 				<div class="journey-con">
 					<div class="sect-header journey-header">
 						<h2>Journey To The Sky Made Simple!</h2>
@@ -138,7 +141,7 @@
 					</div>
 				</div>
 			</section>
-			<section class="sect">
+			<section id="package" class="sect">
 				<div class="enjoy-grid">
 					<div class="enjoy-img-con">
 						<img src="/images/showcase.jpg" alt="a child enjoy playing at sea">
@@ -195,13 +198,19 @@
 					</div>
 				</div>
 			</section>
+
 			<section class="sect">
 				<div class="testimonials-con">
 					<div class="testimonial-head discover-head">
 						<h2>Loved By Over Thousand Travelers</h2>
 						<p>Discover the stories of wanderlust and cherished memories through the eyes of our valued clients.</p>
 					</div>
-					<div class="testimonials-grid"></div>
+					<div class="swiper">
+						<div class="swiper-wrapper">
+
+						</div>
+
+					</div>
 				</div>
 			</section>
 		</main>
@@ -225,7 +234,7 @@
 						<li><a href="#">Cruise</a></li>
 					</ul>
 				</div>
-				<div class="footer__col col-contact">
+				<div id="contact" class="footer__col col-contact">
 					<h4>Contact Us</h4>
 					<ul class="footer__links">
 						<li><a href="#"><span><i class="ri-phone-fill"></i></span> +2348020924307</a></li>
