@@ -84,7 +84,7 @@ body {
 }
 
 header {
-  margin-bottom: 20px;
+  margin-bottom: 15px;
   
 }
 
@@ -150,7 +150,7 @@ nav {
 
 .ham {
   width: 20px;
-  height: 3px;
+  height: 2px;
   background-color: white;
   border-radius: 5px;
   cursor: pointer;
@@ -211,7 +211,7 @@ nav {
 }
 
 section{
-  padding-inline: 20px;
+  padding-inline: 10px;
   padding-block: 40px;
 
 }
@@ -711,7 +711,7 @@ footer {
 }
  
 .footer-con {
-  padding: 4rem;
+  padding: 3rem;
   display: grid;
   padding-bottom: 6rem;
 }
