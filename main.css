@@ -668,6 +668,7 @@ padding-inline: 2rem;
 .testimonial-content {
   background: #ffff;
   padding: 1rem;
+  border-radius: 1rem;
   
 }
 .testimonial-content  i{
