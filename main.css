@@ -918,7 +918,7 @@ form button {
   .nav-links {
   
   flex-direction: column;
-  row-gap: 1.5rem;
+  row-gap: 2rem;
   position: absolute;
   right: 0;
   left: 0;
