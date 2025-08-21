@@ -84,7 +84,7 @@ body {
 }
 
 header {
-  margin-bottom: 25px;
+  margin-bottom: 20px;
   
 }
 
@@ -149,13 +149,16 @@ nav {
 }
 
 .ham {
-  width: 25px;
+  width: 20px;
   height: 3px;
   background-color: white;
   border-radius: 5px;
   cursor: pointer;
   transition: all .10s  ease-in;
-   margin-bottom: 4px;
+   
+}
+.btn1, .btn2 {
+  margin-bottom: 5px;
 }
 
 .isOpen .btn2 {
