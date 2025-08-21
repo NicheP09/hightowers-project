@@ -136,25 +136,26 @@ nav {
 }
 
 .hamburger {
-  width: 24px;
-  height: 24px;
+  width: 20px;
+  height: 20px;
   background: none;
   border: none;
   cursor: pointer;
   outline: none;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+ 
   transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1), color 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .ham {
   width: 25px;
-  height: 4px;
+  height: 3px;
   background-color: white;
   border-radius: 5px;
   cursor: pointer;
   transition: all .10s  ease-in;
+   margin-bottom: 4px;
 }
 
 .isOpen .btn2 {
@@ -162,10 +163,10 @@ nav {
 }
 
 .isOpen .btn1 {
-  transform: rotate(45deg) translate(7px, 7px);
+  transform: rotate(45deg) translate(5px, 5px);
 }
 .isOpen  .btn3 {
-  transform: rotate(-45deg) translate(7px, -7px);
+  transform: rotate(-45deg) translate(5px, -5px);
 }
 
 .hamburger.active {
@@ -899,13 +900,12 @@ form button {
   }
   nav {
 
-  height: 80px;
   padding: var(--padding-15);
   column-gap: 2rem;
   font-weight: var(--ft-w-bold);
   background: var(--clr-bg-100);
   color:var(--clr-text-1); 
-  position: fixed;
+  position: relative;
   right: 0;
   left: 0;
   transition: all 0.30s ease;
@@ -921,7 +921,7 @@ form button {
   position: absolute;
   right: 0;
   left: 0;
-  top: -16px;
+  top: 0;
   width: 100%;
   text-align: center;
   background: var(--clr-bg-100);
@@ -934,7 +934,7 @@ form button {
 }
 
 .nav-links.active {
-  transform: translateY(96px);
+  transform: translateY(16%);
   visibility: visible;
 }
 
