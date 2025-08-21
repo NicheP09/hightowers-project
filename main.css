@@ -658,6 +658,7 @@ padding-inline: 2rem;
   position: relative;
   transition-property: transform;
   display: block;
+  min-height: 350;
   min-width: 375px;
 }
 
