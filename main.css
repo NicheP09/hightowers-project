@@ -6,6 +6,7 @@
 html {
   scroll-behavior: smooth;
 }
+
 :root {
   /* text colors */
   --clr-bg-100: rgb(40, 135, 255);
@@ -30,8 +31,8 @@ html {
   --margin-20: 20px;
   --margin-25: 25px;
   --margin-30: 30px;
+  --margin-40: 40px;
   
-
 /* box-shadow */
 --b-shadow:  rgba(0, 0, 0, 0.2) 5px 5px 20px;
 /* font-sizes */
@@ -598,7 +599,15 @@ padding-inline: 2rem;
   border-radius: 1rem;
   text-align: center;
   padding: 2rem;
+  transition: all 0.4s;
+  cursor: pointer;
+ 
 }
+
+.discover-card:hover {
+  box-shadow: var(--b-shadow);
+}
+
 .discover-card span {
   display: inline-block;
   background-color: rgba(40, 135, 255, 0.1);
