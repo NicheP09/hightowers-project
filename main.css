@@ -648,14 +648,15 @@ padding-inline: 2rem;
   overflow: hidden;
   list-style: none;
   padding: 0;
-  height:350px;
+ 
 }
 
 .swiper-wrapper {
   display: flex;
   transition-property: transform;
   transition-timing-function: var(--swiper-wrapper-transition-timing-function, initial);
-  box-sizing: content-box
+  box-sizing: content-box;
+  scroll-snap-type:x mandatory;
 }
 
 
@@ -669,6 +670,7 @@ padding-inline: 2rem;
   display: block;
   min-height: 350;
   min-width: 375px;
+   height:350px;
 }
 
 .swiper-slide:active {
