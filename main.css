@@ -84,14 +84,8 @@ body {
   
 }
 
-header {
-  margin-bottom: 15px;
-  
-}
-
 nav {
-  position: fixed;
-  top: 0;
+
   width: 100%;
   z-index: 100;
   display: flex;
@@ -130,7 +124,6 @@ nav {
 
 .hamburger-con {
   display: none;
-  padding-right: 16px;
   cursor: pointer;
   order: 3;
   transition: all .10s ease-in;
@@ -910,22 +903,24 @@ form button {
 }
 @media (max-width: 767px) {
   header {
+  position: fixed;
     background: var(--clr-bg-100);
+    width: 100%;
+    z-index: 200;
   }
   nav {
 
   padding: var(--padding-15);
   column-gap: 2rem;
   font-weight: var(--ft-w-bold);
-  background: var(--clr-bg-100);
   color:var(--clr-text-1); 
   position: relative;
   right: 0;
   left: 0;
   transition: all 0.30s ease;
   background-attachment: scroll;
-   
-   z-index: 200;
+  
+  
   }
 
   .nav-links {
@@ -979,6 +974,11 @@ form button {
  .hamburger-con {
   display: block;
   }
+
+main {
+ margin-top: 80px;
+}
+
 
   
 }
