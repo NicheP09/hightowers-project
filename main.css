@@ -507,7 +507,6 @@ border-color:  transparent transparent var(--clr-primary);
 .enjoy-desc p {
   margin-bottom: var(--margin-20);
   color: var(--clr-text-1a);
-  font-size: 12px;
 }
 
 .enjoy-desc .psec {
@@ -890,7 +889,7 @@ form button {
   .enjoy-grid {
     grid-template-columns: repeat(2, 1fr);
     align-items: center;
-    gap: 1rem;
+    gap: 3rem;
   }
   .card-grid, .discover-grid {
 
