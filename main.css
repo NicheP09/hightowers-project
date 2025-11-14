@@ -528,8 +528,6 @@ border-color:  transparent transparent var(--clr-primary);
   font-size: var(--fts-s);
   font-weight: var(--ft-w-bold);
   white-space: nowrap;
-  
-
 }
 .caption-book button {
   border:  none;
@@ -595,7 +593,6 @@ padding-inline: 2rem;
   padding: 2rem;
   transition: all 0.4s;
   cursor: pointer;
- 
 }
 
 .discover-card:hover {
@@ -724,7 +721,6 @@ footer {
 .footer-con {
   padding: 3rem;
   display: grid;
-  padding-bottom: 6rem;
 }
 
 .footer-logo {
